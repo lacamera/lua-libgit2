@@ -19,8 +19,10 @@ hierarchy:
 ```
 Originally inspired by `luagit2`, this version only supports `Lua==5.3` but ships
 in `Lua C`. I don't plan to support versions other than `Lua==5.3` anytime soon; I will hover be updating
-`libgit2` support and feature-completion. Feel free to contribute.
-Maintainer: `Francesco La Camera <fm@lacamera.org>`
+`libgit2` support and feature-completion. Feel free to contribute.  
+  
+Maintainer:  
+`Francesco La Camera <fm@lacamera.org>`
 ### Installation
 Luarocks
 ```sh
