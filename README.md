@@ -6,12 +6,12 @@ Lua bindings to libgit2 written using [LuaC-API](https://www.lua.org/pil/24.html
 mkdir build
 cd build
 cmake ..
+# OpenBSD: LIBRARY_PATH=/usr/local/lib make
 make 
 doas make install
 ```
 
 ### Using luarocks
 ```
-cd luagit2 
 doas luarocks make
 ```
