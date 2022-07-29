@@ -6,10 +6,11 @@
 /* Module Blame
  *
  * This file contains lua-Bindings to libgit2's Blame module.
- * 
+ *
  */
 
-/* Callable function name : luagit2_blame_buffer(lua_userdata luagit2_blame, lua_string buffer
+/* Callable function name : luagit2_blame_buffer(lua_userdata luagit2_blame,
+ lua_string buffer
  *                                              , lua_integer length)
  *
  * Get blame data for a file that has been modified in memory.
@@ -19,9 +20,10 @@
                      (lua_integer) the length of buffer string.
  * Returns : luagit2_blame type user_data object.
  */
-int lua_git_blame_buffer (lua_State *L);
+int lua_git_blame_buffer(lua_State *L);
 
-/* Callable function name : luagit2_blame_file(lua_userdata luagit2_repository, lua_string path_to_file)
+/* Callable function name : luagit2_blame_file(lua_userdata luagit2_repository,
+ lua_string path_to_file)
  *
  * Get blame data for a single file.
  *
@@ -29,9 +31,10 @@ int lua_git_blame_buffer (lua_State *L);
                      (lua_string) the path to file.
  * Returns : luagit2_blame type user_data object.
  */
-int lua_git_blame_file (lua_State *L);
+int lua_git_blame_file(lua_State *L);
 
-/* Callable function name : luagit2_blame_get_hunk_byindex(lua_userdata luagit2_blame, lua_integer index)
+/* Callable function name : luagit2_blame_get_hunk_byindex(lua_userdata
+ luagit2_blame, lua_integer index)
  *
  * Gets the blame hunk at the given index.
  *
@@ -40,9 +43,10 @@ int lua_git_blame_file (lua_State *L);
                      .
  * Returns : luagit2_blame type user_data object.
  */
-int lua_git_blame_get_hunk_byindex (lua_State *L);
+int lua_git_blame_get_hunk_byindex(lua_State *L);
 
-/* Callable function name : luagit2_blame_get_hunk_byline(lua_userdata luagit2_blame, lua_integer line_number)
+/* Callable function name : luagit2_blame_get_hunk_byline(lua_userdata
+ luagit2_blame, lua_integer line_number)
  *
  * Gets the blame hunk at the given line number.
  *
@@ -51,16 +55,17 @@ int lua_git_blame_get_hunk_byindex (lua_State *L);
                      .
  * Returns : luagit2_blame type user_data object.
  */
-int lua_git_blame_get_hunk_byline (lua_State *L);
+int lua_git_blame_get_hunk_byline(lua_State *L);
 
-/* Callable function name : luagit2_blame_get_hunk_count(lua_userdata luagit2_blame)
+/* Callable function name : luagit2_blame_get_hunk_count(lua_userdata
+ * luagit2_blame)
  *
  * Gets the blame hunk at the given line number.
  *
  * Params required : (lua_userdata) the reference luagit2_blame,
  * Returns : Hunk count for given luagit2_blame.
  */
-int lua_git_blame_get_hunk_count (lua_State *L);
+int lua_git_blame_get_hunk_count(lua_State *L);
 
 /* Callable function name : luagit2_blame_free(lua_userdata luagit2_blame)
  *
@@ -69,6 +74,6 @@ int lua_git_blame_get_hunk_count (lua_State *L);
  * Params required : (lua_userdata) the reference luagit2_blame,
  * Returns : None.
  */
-int lua_git_blame_free (lua_State *L);
+int lua_git_blame_free(lua_State *L);
 
 #endif

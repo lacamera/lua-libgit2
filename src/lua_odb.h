@@ -16,4 +16,4 @@ int lua_git_odb_read(lua_State *L);
 int lua_git_odb_refresh(lua_State *L);
 int lua_git_odb_write(lua_State *L);
 
-#endif 
+#endif

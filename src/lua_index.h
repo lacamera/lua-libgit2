@@ -18,7 +18,7 @@ int lua_git_index_get_byindex(lua_State *L);
 int lua_git_index_get_bypath(lua_State *L);
 int lua_git_index_has_conflicts(lua_State *L);
 int lua_git_index_open(lua_State *L);
-int lua_git_index_owner (lua_State *L);
+int lua_git_index_owner(lua_State *L);
 int lua_git_index_path(lua_State *L);
 int lua_git_index_read(lua_State *L);
 int lua_git_index_read_tree(lua_State *L);

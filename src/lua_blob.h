@@ -6,21 +6,23 @@
 /* Module Blob
  *
  * This file contains lua-Bindings to libgit2's Blob module.
- * 
+ *
  */
 
-/* Callable function name : luagit2_blob_create_fromdisk(lua_userdata luagit2_repository, lua_string path )
+/* Callable function name : luagit2_blob_create_fromdisk(lua_userdata
+ luagit2_repository, lua_string path )
  *
- * Read a file from the filesystem and write its content to the Object Database as a loose blob.
+ * Read a file from the filesystem and write its content to the Object Database
+ as a loose blob.
  *
  * Params required : (lua_userdata) the repository to look up,
                      (lua_string) the path to file.
  * Returns : luagit2_oid type user_data object.
  */
-int lua_git_blob_create_fromdisk (lua_State *L);
+int lua_git_blob_create_fromdisk(lua_State *L);
 
-/* Callable function name : luagit2_blob_create_fromworkdir(lua_userdata luagit2_repository, 
-                                                            lua_string relative_path )
+/* Callable function name : luagit2_blob_create_fromworkdir(lua_userdata
+ luagit2_repository, lua_string relative_path )
  *
  * Read a file from the working folder of a repository
  * and write its content to the Object Database as a loose blob.
@@ -29,10 +31,10 @@ int lua_git_blob_create_fromdisk (lua_State *L);
                      (lua_string) the path to file.
  * Returns : luagit2_oid type user_data object.
  */
-int lua_git_blob_create_fromworkdir (lua_State *L);
+int lua_git_blob_create_fromworkdir(lua_State *L);
 
-/* Callable function name : luagit2_blob_filtered_content(lua_userdata luagit2_blob, 
-                                lua_string path , lua_integer check_for_binary_data )
+/* Callable function name : luagit2_blob_filtered_content(lua_userdata
+ luagit2_blob, lua_string path , lua_integer check_for_binary_data )
  *
  * Get a buffer with the filtered content of a blob.
  *
@@ -41,7 +43,7 @@ int lua_git_blob_create_fromworkdir (lua_State *L);
                      (lua_integer) bool argument to check for binary data.
  * Returns : luagit2_buf type user_data object.
  */
-int lua_git_blob_filtered_content (lua_State *L);
+int lua_git_blob_filtered_content(lua_State *L);
 
 /* Callable function name : luagit2_blob_id(lua_userdata luagit2_blob)
  *
@@ -50,7 +52,7 @@ int lua_git_blob_filtered_content (lua_State *L);
  * Params required : (lua_userdata) the blob to look up to,
  * Returns : luagit2_oid type user_data object.
  */
-int lua_git_blob_id (lua_State *L);
+int lua_git_blob_id(lua_State *L);
 
 /* Callable function name : luagit2_blob_is_binary(lua_userdata luagit2_blob)
  *
@@ -59,9 +61,10 @@ int lua_git_blob_id (lua_State *L);
  * Params required : (lua_userdata) the blob to look up to,
  * Returns : luagit2_integer , bool equivalent of whether blob is binary.
  */
-int lua_git_blob_is_binary (lua_State *L);
+int lua_git_blob_is_binary(lua_State *L);
 
-/* Callable function name : luagit2_blob_lookup(lua_userdata luagit2_repository, lua_userdata oid)
+/* Callable function name : luagit2_blob_lookup(lua_userdata luagit2_repository,
+ lua_userdata oid)
  *
  * Lookup a blob object from a repository.
  *
@@ -69,19 +72,20 @@ int lua_git_blob_is_binary (lua_State *L);
                      (lua_userdata) the oid of object to look up.
  * Returns : luagit2_blob type user_data object.
  */
-int lua_git_blob_lookup (lua_State *L);
+int lua_git_blob_lookup(lua_State *L);
 
-/* Callable function name : luagit2_blob_lookup_prefix(lua_userdata luagit2_repository, 
-                                                lua_userdata oid , lua_integer length)
+/* Callable function name : luagit2_blob_lookup_prefix(lua_userdata
+ luagit2_repository, lua_userdata oid , lua_integer length)
  *
- * Lookup a blob object from a repository, given a prefix of its identifier (short id).
+ * Lookup a blob object from a repository, given a prefix of its identifier
+ (short id).
  *
  * Params required : (lua_userdata) the repo to look in,
                      (lua_userdata) the oid of object to look up.
                      (lua_userdata) length of oid
  * Returns : luagit2_blob type user_data object.
  */
-int lua_git_blob_lookup_prefix (lua_State *L);
+int lua_git_blob_lookup_prefix(lua_State *L);
 
 /* Callable function name : luagit2_blob_owner(lua_userdata luagit2_blob)
  *
@@ -109,6 +113,5 @@ int lua_git_blob_rawsize(lua_State *L);
  * Returns : None.
  */
 int lua_git_blob_free(lua_State *L);
-
 
 #endif
