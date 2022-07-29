@@ -23,15 +23,17 @@ in `Lua C`. I don't plan to support versions other than `Lua==5.3` anytime soon;
 Maintainer: `Francesco La Camera <fm@lacamera.org>`
 ### Installation
 Luarocks
-```
+```sh
 (root) luarocks make
 ```
 From source
+```sh
+# OpenBSD
+export LIBRARY_PATH=/usr/local/lib
 ```
-mkdir build
-cd build
+```sh
+mkdir build && cd build
 cmake ..
-#### OpenBSD: LIBRARY_PATH=/usr/local/lib make
 make 
 (root) make install
 ```
