@@ -8,7 +8,7 @@ lua-5.3 bindings to libgit2
 ```  
 Maintained by `Francesco La Camera <fm@lacamera.org>`, entirely [ISC](LICENSE)
 ### Dependencies
-`lua-libgit2` needs `lua==5.3` and `libgit2` (present if you have `git` installed).
+`lua-libgit2` needs `lua==5.3` and `libgit2`.
 ### Installation
 #### Luarocks
 ```sh
