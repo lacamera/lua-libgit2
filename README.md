@@ -4,7 +4,7 @@
 |  ||  |  |  _  |______|  |  |  _  |  _  ||  |   _|    __|
 |__||_____|___._|      |__|__|_____|___  ||__|____|______|
                                    |_____|                                   
-lua-5.3 bindings to libgit2
+lua bindings to libgit2
 ```  
 Maintained by `Francesco La Camera <fm@lacamera.org>`, entirely [ISC](LICENSE)
 ### Dependencies
