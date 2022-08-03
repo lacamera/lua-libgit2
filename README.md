@@ -5,16 +5,24 @@
 |__||_____|___._|      |__|__|_____|___  ||__|____|______|
                                    |_____|                                   
 lua-5.3 bindings to libgit2
-```
+```  
+Maintained by `Francesco La Camera <fm@lacamera.org>`, entirely [ISC](LICENSE)
+### Dependencies
+`lua-libgit2` needs `lua==5.3` and `libgit2` (present if you have `git` installed).
 ### Installation
-Luarocks
+#### Luarocks
 ```sh
 (root) luarocks make
 ```
-From source
+#### From source
 ```sh
 # OpenBSD
+(root) pkg_add lua-5.3 git
 export LIBRARY_PATH=/usr/local/lib
+```
+```sh
+# Debian/Ubuntu
+(root) apt install lua5.3 liblua5.3-dev libgit2-dev
 ```
 ```sh
 mkdir build && cd build
@@ -24,18 +32,12 @@ make
 ```
 ### Documentation
 Consult `apropros lua-libgit2` and inspect the source code if necessary.  
-Hierarchy
+#### Hierarchy
 ```
 - src/                  lua_*.{c,h} and wrapper.c
 - Findlibgit2.cmake     cmake: libgit2 "find" script (cmake needs this)
 - CMakeLists.txt        cmake co-routines
-- lua-libgit2.rockspec  (needs reformatting) (luarocks pkgconf)
-- LICENSE               BSD-2-Clause license
+- lua-libgit2.rockspec  (wip) (luarocks pkgconf)
 - README.md             markdown formatted README
 ```
-Originally inspired by `luagit2`, this version only supports `Lua==5.3` but ships
-in `Lua C`. I don't plan to support versions other than `Lua==5.3` anytime soon; I will hover be updating
-`libgit2` support and feature-completion. Feel free to contribute.  
-  
-Maintainer:  
-`Francesco La Camera <fm@lacamera.org>`
+Originally inspired by `luagit2`.
