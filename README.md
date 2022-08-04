@@ -22,12 +22,11 @@ export LIBRARY_PATH=/usr/local/lib
 ```
 ```sh
 # Debian/Ubuntu
-(root) apt install lua5.3 liblua5.3-dev libgit2-dev
+(root) apt install make cmake lua5.3 liblua5.3-dev libgit2-dev
 ```
 ```sh
 mkdir build && cd build
 cmake ..
-make 
 (root) make install
 ```
 ### Documentation
